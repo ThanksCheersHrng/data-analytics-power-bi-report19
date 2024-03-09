@@ -29,7 +29,7 @@ Complete as of 09/03/24. Created a table of dates. Created a Measures Table (lea
 Complete as of 09/03/24. Frighteningly easy. Just create four pages in the Report view, name them, and leave a colourful left-side rectangle that will become the navigation pane. 
 
 ### Milestone 5. 
-Complete as of 09/03/24. Built customer detail page. Cleaned data when report made it obvious the initial date table hadn't been set up properly. 
+Complete as of 09/03/24. Built customer detail page. Cleaned data when report made it obvious the initial date table hadn't been set up properly. Didn't have adding trendline as an option so one task incomplete. See Evidence....JPG. 
 
 ### Milestone 6. 
 Complete as of ##/03/24 
