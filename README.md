@@ -26,7 +26,7 @@ Complete as of 04/03/24. In Summary, used multiple sources of data to load in Or
 Complete as of 09/03/24. Created a table of dates. Created a Measures Table (learned this can't just be called Measures for some reason. also learned a Measures table can ONLY contain measures.). Built star schema. Most relationships were identified by Power BI before I had to bother with them. Also learned that an active relationship only needs to be explicitly specified when there are two or more established relationships between variables in the same *pair* of tables. Didn't record every DAX formula I used between now and Milestone 6, so sorry to whoever grades this: you'll just have to poke round my PowerBI document to find out. Created hierarchies for dates and geography. Also learned that there's a difference between a 'data type' (e.g. text) and a 'data category' (e.g. country). Shout out to YouTube being really helpful for this section, since so much data manipulation can quickly be done visiaully in PBI. 
 
 ### Milestone 4. 
-Complete as of ##/03/24 
+Complete as of 09/03/24. Frighteningly easy. Just create four pages in the Report view, name them, and leave a colourful left-side rectangle that will become the navigation pane. 
 
 ### Milestone 5. 
 Complete as of ##/03/24 
