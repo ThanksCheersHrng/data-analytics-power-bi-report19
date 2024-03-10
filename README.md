@@ -38,7 +38,19 @@ Complete as of 10/03/24. Built assigned page (see table of contents, above). Lot
 Complete as of 10/03/24. Copy/pasted previous quarter X measures and adjusted to be current quarter X measures. There are multiple sections where gauge colours can be conditionally formatted, and one worked and one didn't so that's why you see things the way you see them. Same thing goes for selecting max/min values on the gagues- had to go to the gague axis formatting, not to the actual values. For the scatterplot, I was advised to 'remove values to display x- and y-axis pairs,' so I did. By selecting individual points you can identify the description in the table. Learned some cool tricks about creating shapes and icons and buttons to help a user navigate the dashboard; this is where the View menu really comes into its own, with Bookmarks and Selection Panes. 
 
 ### Milestone 8. 
-Complete as of 10/03/24. 
+Complete as of 10/03/24. Could not find the 'multi-select' option, nor the 'Selection settings' in which it was purporedly contained, when creating the Country Slicer. CBA with creating yet another target- notice that I just changed the quarterly target from 5% to 10% growth on the bidding of the CEO. But okay fine, created a Target Yearly Profit (which required creation of the Previous Year Profit) measure for the gauge on the Stores Drillthrough Page. My page format panel looked different to AiCore's (see images in the repo), and didn't offer selection of Page Type, so I tried using an alterntive approach offered by ChatGPT. The steps suggested were as shown below, but (see another image in the repo) I did not have as extensive a Page View dropdown option as ChatGPT (i.e. a fast and powerful search enginge) expected. Thus, my drilldown page is *not* a drilldown page. Harumph, I say. 
+Here was ChatGPT's suggestion for setting a page to Drillthrough: 
+"""
+    1. Go to the Page Settings: Click on the "View" tab in the ribbon at the top of the Power BI Desktop window.
+
+    2. Access Page Settings: In the "View" tab, click on "Page View" to open the dropdown menu, then select "Page settings."
+
+    3. Set Page Type to Drillthrough: In the Page Settings dialog box, navigate to the "Page Information" section.
+
+    4. Choose Drillthrough as the Page Type: Under "Page type," select "Drillthrough." This will set the page type to drillthrough for the current page.
+
+    5. Apply Changes: Click on the "OK" button to apply the changes and close the Page Settings dialog box.
+"""
 
 ### Milestone 9. 
 Complete as of 10/03/24. 
