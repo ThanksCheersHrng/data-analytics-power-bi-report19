@@ -35,7 +35,7 @@ Complete as of 09/03/24. Built customer detail page. Cleaned data when report ma
 Complete as of 10/03/24. Built assigned page (see table of contents, above). Lots of Copy/Pastes and slight adjustments. Created some new measures for the KPI. Target X built as 1.05 times [Previous Quarter X]. Previous Quarter X built in DAX by defining quarter ends and starts, then outputing total X with limit of the appropriate range of dates. 
 
 ### Milestone 7. 
-Complete as of 10/03/24. 
+Complete as of 10/03/24. Copy/pasted previous quarter X measures and adjusted to be current quarter X measures. There are multiple sections where gauge colours can be conditionally formatted, and one worked and one didn't so that's why you see things the way you see them. Same thing goes for selecting max/min values on the gagues- had to go to the gague axis formatting, not to the actual values. For the scatterplot, I was advised to 'remove values to display x- and y-axis pairs,' so I did. By selecting individual points you can identify the description in the table. Learned some cool tricks about creating shapes and icons and buttons to help a user navigate the dashboard; this is where the View menu really comes into its own, with Bookmarks and Selection Panes. 
 
 ### Milestone 8. 
 Complete as of 10/03/24. 
