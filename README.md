@@ -29,7 +29,7 @@ Complete as of 09/03/24. Created a table of dates. Created a Measures Table (lea
 Complete as of 09/03/24. Frighteningly easy. Just create four pages in the Report view, name them, and leave a colourful left-side rectangle that will become the navigation pane. 
 
 ### Milestone 5. 
-Complete as of 09/03/24. Built customer detail page. Cleaned data when report made it obvious the initial date table hadn't been set up properly. 
+Complete as of 09/03/24. Built customer detail page. Cleaned data when report made it obvious the initial date table hadn't been set up properly. Didn't have adding trendline as an option so one task incomplete. See Evidence....JPG. 
 
 ### Milestone 6. 
 Complete as of 10/03/24. Built assigned page (see table of contents, above). Lots of Copy/Pastes and slight adjustments. Created some new measures for the KPI. Target X built as 1.05 times [Previous Quarter X]. Previous Quarter X built in DAX by defining quarter ends and starts, then outputing total X with limit of the appropriate range of dates. 
