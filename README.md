@@ -32,4 +32,16 @@ Complete as of 09/03/24. Frighteningly easy. Just create four pages in the Repor
 Complete as of 09/03/24. Built customer detail page. Cleaned data when report made it obvious the initial date table hadn't been set up properly. 
 
 ### Milestone 6. 
-Complete as of ##/03/24 
+Complete as of 10/03/24. Built assigned page (see table of contents, above). Lots of Copy/Pastes and slight adjustments. Created some new measures for the KPI. Target X built as 1.05 times [Previous Quarter X]. Previous Quarter X built in DAX by defining quarter ends and starts, then outputing total X with limit of the appropriate range of dates. 
+
+### Milestone 7. 
+Complete as of 10/03/24. 
+
+### Milestone 8. 
+Complete as of 10/03/24. 
+
+### Milestone 9. 
+Complete as of 10/03/24. 
+
+### Milestone 10. 
+Complete as of 10/03/24. 
