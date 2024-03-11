@@ -56,4 +56,4 @@ Here was ChatGPT's suggestion for setting a page to Drillthrough:
 Complete as of 10/03/24. The first task is to ensure the cross-filtering is in accordance with AiCore's preferences. These largely already appeared to be filtered in such a way that didn't require intervention. For example, see "no action needed" image in repo. I later noticed little icons popped up and I could adjust them, see "what_do_these_do" image in repo. I adjusted them in a fashion that seemd to fit the requirements of the cross-filtering instructions for Milestone 9. Somehow the instructions on setting up buttons made more sense to me this time, so I also fixed the button from Product Detail page from a previous milestone. 
 
 ### Milestone 10. 
-Complete as of 10/03/24. 
+Complete as of 11/03/24. First, in order to connect to the PostgreSQL server, I learned that I can't connect from my app, "DB Browser for SQLite," because the SQLite browser doesn't support connections to other database systems. Thus, the prompt was to use VSCode and its SQLTools extension to complete this task. 
