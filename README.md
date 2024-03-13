@@ -116,3 +116,4 @@ WHERE column_name LIKE '%staff%';
 
 which returned table = dim_store and column = staff_numbers -- perfect! 
 
+Since dim_store turned out to be useful, I started to guess that dim_ might indicate the 'originals,' and thus the tables most worth querying. So I saved lists of column names for dim_store and dim_date to go with my previously saved dim_customer and dim_product columns. Unfortunately the dim_date table appears to just be a continuous date 'background' so I'm not sure where I can find a link between actual date attached to actual orders and actual revenue from that order in order to answer question 2. There is simply too much noise!! 
