@@ -105,3 +105,14 @@ Note: In task 2, I just generated the csv's using the same sql file by rewriting
     FROM information_schema.columns
     WHERE table_schema = 'public'
       AND table_name = 'storessummary_for_example'" and then overwrite that query with the one that will answer the question. 
+
+It was upon realising one of the table names in the db was just 'q4' that perhaps other students had accidentally uploaded their answers to the database, which would explain the maddening, cacophonous, and strangely repetitively themed names of tables. 
+
+Because there were SO MANY different tables with 'store' in the name, I realised I'd need to get smarter in order to answer question one, so I used this code to find the right table to work from: 
+
+SELECT table_name, column_name
+FROM information_schema.columns
+WHERE column_name LIKE '%staff%'; 
+
+which returned table = dim_store and column = staff_numbers -- perfect! 
+
