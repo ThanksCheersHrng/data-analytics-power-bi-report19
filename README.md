@@ -56,4 +56,43 @@ Here was ChatGPT's suggestion for setting a page to Drillthrough:
 Complete as of 10/03/24. The first task is to ensure the cross-filtering is in accordance with AiCore's preferences. These largely already appeared to be filtered in such a way that didn't require intervention. For example, see "no action needed" image in repo. I later noticed little icons popped up and I could adjust them, see "what_do_these_do" image in repo. I adjusted them in a fashion that seemd to fit the requirements of the cross-filtering instructions for Milestone 9. Somehow the instructions on setting up buttons made more sense to me this time, so I also fixed the button from Product Detail page from a previous milestone. 
 
 ### Milestone 10. 
-Complete as of 11/03/24. First, in order to connect to the PostgreSQL server, I learned that I can't connect from my app, "DB Browser for SQLite," because the SQLite browser doesn't support connections to other database systems. Thus, the prompt was to use VSCode and its SQLTools extension to complete this task. I was not aware then that I would need a 'driver' to connect to a server. So extra thanks to this chap on youtube: https://www.youtube.com/watch?v=C0y35FpiLRA. 
+Complete as of ##/03/24. First, in order to connect to the PostgreSQL server, I learned that I can't connect from my app, "DB Browser for SQLite," because the SQLite browser doesn't support connections to other database systems. Thus, the prompt was to use VSCode and its SQLTools extension to complete this task. I was not aware then that I would need a 'driver' to connect to a server. So extra thanks to this chap on youtube: https://www.youtube.com/watch?v=C0y35FpiLRA. Of course, I only installed the Postgre database since that's part of the AiCore assignment. 
+The second task involved copying lists of tables and tables into my local folder. A series of errors led me to realise that postGRE SQL must have its own functions that require permissions, similar to simple read and write for most documents. I wanted to find out if my hypothesis was correct, which led me to this interesting bit of learning from ChatGPT: 
+"To confirm whether you have the necessary privileges of the pg_write_server_files role to copy data to a file using the COPY command in PostgreSQL, you can use the following steps:
+
+    Access PostgreSQL with psql: Open your terminal or command prompt and connect to your PostgreSQL server using psql:
+
+    bash
+
+psql -U your_username -d your_database
+
+Replace your_username with your PostgreSQL username and your_database with the name of your database.
+
+Check Your Roles: Once connected to psql, you can check which roles your user belongs to by running the following command:
+
+sql
+
+\du
+
+This command will display a list of roles along with their attributes, including the one you're logged in with.
+
+Check Your Privileges: You can then check the privileges granted to your user or roles by using the \dp command. This command will show the access privileges for tables, views, and sequences.
+
+sql
+
+    \dp
+
+    This will list the access privileges for all objects in the current database.
+
+    Verify pg_write_server_files Role: Check if your user or any roles you belong to have been granted the necessary privileges for the pg_write_server_files role. This role is typically used to grant permissions for writing files on the server.
+
+    Check Filesystem Permissions: Additionally, ensure that the user running the PostgreSQL server process has the necessary permissions to write to the directory specified in the COPY command.
+
+By following these steps, you can confirm whether you have the necessary privileges to copy data to a file using the COPY command in PostgreSQL. If you do not have the required privileges, you may need to adjust your user's roles or permissions accordingly." 
+
+The first step ChatGPT describes suggests that when I use COPY, I'm asking "maya," the user who set up the remote server, to make changes to my device, where the superuser is just called "user." 
+
+But alas, all my theorising about who the problematic, un-permitted user might be was for naught: 
+
+$ psql -U maya -d orders-db
+bash: psql: command not found
