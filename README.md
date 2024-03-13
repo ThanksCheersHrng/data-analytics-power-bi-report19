@@ -96,3 +96,7 @@ But alas, all my theorising about who the problematic, un-permitted user might b
 
 $ psql -U maya -d orders-db
 bash: psql: command not found
+
+In the end, while the potential explanation of a mis-match of privileges between a mis-match of users between my local computer and the postGRE server is tantalising, the solution offered by a team member at AiCore was much simpler. Thus, I learned what the 'export' button for sql outputs is for--- it can save SELECT-based queries' printouts as various file types, including .csv. Yay! Thank you. 
+
+This manual step after every printout of column names from a table would make creating a csv for every table far less automatable. I did still look into the possibility, however, and learned (were my COPY function in SQL working okay this could be worth it) that SQL doesn't really "get" iteration, but you could wrap SQL within an interpreter like Python (e.g. with open('list_of_tables_in_db_postGRE.csv') ... etc). So even though you'll see I only included a few more 'table_name_columns.csv's in my repo, I am aware of easily generating them for every table (ask task 2.3 wishes) through the power of iteration. 
