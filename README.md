@@ -117,3 +117,36 @@ WHERE column_name LIKE '%staff%';
 which returned table = dim_store and column = staff_numbers -- perfect! 
 
 Since dim_store turned out to be useful, I started to guess that dim_ might indicate the 'originals,' and thus the tables most worth querying. So I saved lists of column names for dim_store and dim_date to go with my previously saved dim_customer and dim_product columns. Unfortunately the dim_date table appears to just be a continuous date 'background' so I'm not sure where I can find a link between actual date attached to actual orders and actual revenue from that order in order to answer question 2. There is simply too much noise!! 
+
+Ideally I would have some orderID that I could use to create joins for questions 2, 3, and 5, but I can't find one. Why do I think I need joins? Because question 2 needs to connect month with revenue, which don't seem to appear together in the main tables; question 3 needs to connect country code, store type, and revenue, and question 5 needs to connect category, profit (revenue) and region. 
+
+I am running very short on time till the end of this course. So, as with the manual workaround this confusing db connection forced me to use for creating csvs, I think this noisy collection of tables in the db will force me to use a convoluted workaround and pare down the work achieved. In other words, I will use one of the three remaining questions above as a demonstration of my ability to work with SQL. The first one I find where there is an appropriate join-able pair of columns, that is the one I will complete. Please take my work in whatever query that may be as proof of learning. 
+
+To help me visually match up a join-able column, I dragged all the major csv's of this repo (that are related to these SQL tasks-- bear in mind these are just lists of column names in tables in the db) into PowerBI, transformed them (transpose, then use first row as headers, so PowerBI treats the column names as empty columns). That way, I could go to the model view and find matching column names. Thus, you can see the "Lazy_Schema.JPG" created from a quick play with an unsaved .pbix file. * aaaaand... delete. *
+
+It's beautiful to see the relations between product_code (in dim_product and orders) *and* store_code (in dim_store and orders) are both 1:1, since that is SQL Inner Join's bread and butter. Thus, I plan to do question five with this general plan: 
+    1. Inner Join dim_product (alias pt) and orders (ot) along product_code
+        - Select pt.category, pt.sale_price, ot.store_code, and ot.product_quantity
+        - Save the resultant table implicitly within the query as joint_table_op
+    2. Inner join joint_table_op (jt) and dim_store (st) along store_code
+        - Select * from jt where st.country_region = '\%iltshire\%' (no W because I can't remember if it's a case sensitive search)
+        - Save the resultant table implicitly within the query as joint_table_sop 
+    3. Create a subquery (of joint_table_sop, of course)
+        - select category and SUM(sale_price*product_quantity) as total
+        - group by category 
+        - order by total (descending, so the maximum is at the top)
+    4. Finally, off of subquery: 
+        - select category
+        - limit 1 (just return the maximally profitable category)
+
+In the final implementation of q5, you'll see a simpler query without temporarilty saving "joint_table_x; someone pointed out to me that I don't have to specifically save the columns I want to use from the join, and I was just overcomplicating things. 
+
+And there we have it. The end of my time with AiCore. What I've learned about PowerBI has already gone into helping me make improvements at my new job, as I automate data cleaning tasks and produce more sophisticated schema in model view. 
+
+## Goodbye AiCore
+
+I'm happy to see it over only because I had the good misfortune of starting a new job at around the same time as I started AiCore, so for the past six months, I've been working 12 hour days with my wrists in the T-rex position -- and that's only when I'm *not* busy! XD Though I'm glad I won't be logging on again next week, I can't fault the design of the course or the help from the tech/learning support team. As a former teacher myself, I can say you guys did a great job from a pedagogical standpoint!
+
+Whomever's reading this, give a shout out to Vander- he was the first specialist who ever answered one of my queries, and tonight, coming full circle, he was my last as well. But that certainly doesn't mean Blair, Jared, Mateusz, and all the rest don't deserve a pat on the back for their friendly persistence and expertise as well! 
+
+Thanks all. G'bye. -T 
